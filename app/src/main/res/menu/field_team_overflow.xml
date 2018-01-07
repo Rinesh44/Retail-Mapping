@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.FieldTeamActivity">
+
+    <item
+        android:id="@+id/add_shop"
+        android:title="@string/add_shop"
+        app:showAsAction="never"/>
+
+
+    <item
+        android:id="@+id/existing"
+        android:title="@string/existing"
+        app:showAsAction="never"/>
+
+
+</menu>

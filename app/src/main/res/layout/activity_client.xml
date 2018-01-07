@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.android.retailmappiing.ClientActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blueish_gray">
+
+            <include
+                android:id="@+id/select"
+                layout="@layout/admin_appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+            <View
+                android:id="@+id/elevation"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_below="@+id/tabs"
+                android:background="@drawable/shadow" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select"
+                android:elevation="4dp"
+                app:tabBackground="@color/colorPrimary"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabPaddingEnd="12dp"
+                app:tabPaddingStart="12dp"
+                app:tabSelectedTextColor="@android:color/white"
+                app:tabTextColor="@color/tabTextColor" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/elevation">
+
+                <TextView
+                    android:id="@+id/home"
+                    style="@style/CategoryStyle"
+                    android:text="Home" />
+
+                <TextView
+                    android:id="@+id/furniture"
+                    style="@style/CategoryStyle"
+                    android:text="Furniture Request" />
+
+                <TextView
+                    android:id="@+id/material"
+                    style="@style/CategoryStyle"
+                    android:text="Material Request" />
+
+
+                <TextView
+                    android:id="@+id/shoplist"
+                    style="@style/CategoryStyle"
+                    android:text="Shop List" />
+
+            </android.support.v4.view.ViewPager>
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <fragment
+        android:id="@+id/fragment_navigation_drawer"
+        android:name="com.example.android.retailmapping.NavigationDrawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_navigation_drawer"
+        tools:layout="@layout/fragment_navigation_drawer" />
+</android.support.v4.widget.DrawerLayout>
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0c4da2</color>
+    <color name="colorPrimaryDark">#0c4da2 </color>
+    <color name="colorAccent">#FFA726</color>
+    <color name="background">#E0E0E0</color>
+    <color name="blueish_gray">#FAFAFA</color>
+    <color name="lime">#CDDC39</color>
+    <color name="tabTextColor">#BDBDBD</color>
+    <color name="orange">#FF9800</color>
+
+    <color name="translucent">#30000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="navigationBackground">#212121</color>
+
+    <color name="samsung">#0c4da2</color>
+    <color name="huawei">#D32419</color>
+    <color name="sony">#009C74</color>
+    <color name="colors">#FFA726</color>
+
+
+</resources>

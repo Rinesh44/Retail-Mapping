@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/background">
+
+    <View
+        android:id="@+id/elevation"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/shadow" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textParticulars"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Size:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutwidth"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textParticulars"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/size"
+        android:hint="Width"
+        android:textAlignment="center">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editTextWidth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textAlignment="center" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutheight"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/qty"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/layoutwidth"
+        android:hint="Height"
+        android:textAlignment="center">
+
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textAlignment="center" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutwidth"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Quantity:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/qty"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutwidth"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/quantity"
+        android:hint="Qty"
+        android:textAlignment="center">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textqty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textAlignment="center" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qty"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Brand"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/brandDrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qty"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/brand"
+        android:background="@android:drawable/btn_dropdown" />
+
+    <TextView
+        android:id="@+id/before"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/brandDrop"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:text="Image Before:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/beforeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/captured"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/before"
+        android:background="@android:drawable/btn_default"
+        android:text="Capture Image" />
+
+    <ImageView
+        android:id="@+id/captured"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/brandDrop"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/before"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/particulars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:text="Particulars:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/textParticulars"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/particulars"
+        android:background="#f5f5f5"
+        android:gravity="center"
+        android:padding="10dp" />
+
+</RelativeLayout>
+
+
